@@ -3,7 +3,6 @@ import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import { IoDocument, IoMail } from "react-icons/io5";
 import { IconType } from "react-icons";
 import { CgWebsite } from "react-icons/cg";
-import { FaLocationDot } from "react-icons/fa6";
 
 export default function Bio({
   name,
@@ -15,10 +14,9 @@ export default function Bio({
   availableForWork,
   languages,
   portfolioLink,
-  location,
 }: {
   name: string;
-  bio: string;
+  bio: string[];
   pic: string;
   socialLinks: { name: string; url: string }[];
   email: string;
@@ -26,7 +24,6 @@ export default function Bio({
   availableForWork: boolean;
   languages: IconType[];
   portfolioLink: string;
-  location: string;
 }) {
   const icons: {
     [key: string]: JSX.Element;
@@ -54,7 +51,7 @@ export default function Bio({
             .join("")}
         </AvatarFallback>
       </Avatar>
-      <div className="flex flex-col max-w-sm mx-auto">
+      <div className="flex flex-col max-w-sm mx-auto space-y-2">
         <p className="font-semibold items-center justify-between text-lg flex gap-x-1">
           {name}
           <div className="flex gap-x-1 flex-wrap">
@@ -64,10 +61,11 @@ export default function Bio({
           </div>
         </p>
 
-        <p className="flex items-center gap-x-1">
-          <FaLocationDot /> {location}
-        </p>
-        <p>{bio}</p>
+        {bio.map((b, key) => (
+          <p key={key} className="text-sm">
+            {b}
+          </p>
+        ))}
         <div className="flex flex-wrap gap-x-2">
           {socialLinks.map((link, key) => (
             <a
