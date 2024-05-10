@@ -3,7 +3,7 @@ import { SiJavascript, SiPython, SiTypescript } from "react-icons/si";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-2">
+    <div className="flex flex-col items-center justify-center min-h-dvh p-2">
       <Bio
         name="Saad Farhan"
         bio={[
