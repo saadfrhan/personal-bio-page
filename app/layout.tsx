@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import ThemeToggler from "@/components/theme-toggler";
 
-const inter = Inter({ subsets: ["latin"] });
+const poppins = Poppins({ subsets: ["latin"], weight: ['400', '700', '300'] });
 
 const shortInfo = {
   title: "Saad Farhan",
@@ -39,7 +40,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
   },
   verification: {
-    google: "98alH-ks_u8FNSs8yttV6lPbFqfPbRl9zyJ0HQxUtVo",
+    google: "zHB4gjR-LZ7okfLYgT9olSwGCyo9geeG3Ky4RUpnr1k",
   },
 };
 
@@ -50,13 +51,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className={poppins.className}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
+          <ThemeToggler />
           {children}
         </ThemeProvider>
       </body>
