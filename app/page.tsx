@@ -25,7 +25,7 @@ export default function Home() {
             url: "https://discordapp.com/users/saadfrhan",
           },
         ]}
-        resumeLink="https://www.canva.com/design/DAFb3337tIA/nh3rOWE5EiM7U2QB5yQK5A/edit"
+        resumeLink="https://docs.google.com/document/d/1pF2V1SJlKJWsIUARQiJ6rf6X-uFd3kVxMd8ZS30ruZ4/edit?usp=sharing"
         portfolioLink="https://saadfarhan.vercel.app"
       />
     </div>
