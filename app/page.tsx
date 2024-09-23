@@ -4,12 +4,8 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center min-h-dvh p-2">
       <Bio
-        name="Saad Farhan"
-        bio={[
-          "With 5 years of development experience, I specialize in cutting-edge technologies and frameworks. Currently, I'm building a Pomodoro productivity app, adding features like customizable timers, task organization, and progress tracking.",
-
-          "Additionally, as a Teaching Assistant in AI & Artificial Intelligence, I'm passionate about sharing knowledge and empowering students. Proficient in Next.js, Node.js, TypeScript, and Python.",
-        ]}
+        name="Saad"
+        bio="Fullstack Developer and Teacher Assistant in Pakistan's largest IT class, skilled in Next.js, Node.js, TypeScript, and Python for building modern web apps."
         email="saadfarhan347@gmail.com"
         socialLinks={[
           {

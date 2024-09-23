@@ -11,7 +11,7 @@ export default function Bio({
   portfolioLink,
 }: {
   name: string;
-  bio: string[];
+  bio: string;
   socialLinks: { name: string; url: string }[];
   email: string;
   resumeLink: string;
@@ -28,13 +28,13 @@ export default function Bio({
   return (
     <div className="flex items-start flex-col gap-y-2">
       <div className="flex flex-col max-w-sm mx-auto space-y-2">
-          <p className="font-extrabold text-heading text-3xl">{name}</p>
+      <h2 className="text-3xl font-bold text-heading tracking-tight flex max-sm:flex-col gap-2">
+        Hey, <p>I am {name}. 👋</p>
+      </h2>
 
-        {bio.map((b, key) => (
-          <p key={key} className="text-sm font-light">
-            {b}
+          <p className="text-sm font-light">
+            {bio}
           </p>
-        ))}
         <div className="flex flex-wrap gap-x-2 font-light">
           {socialLinks.map((link, key) => (
             <a
